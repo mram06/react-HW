@@ -1,0 +1,21 @@
+.table {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  border: 1px solid white;
+}
+.column div:first-child {
+  font-weight: bold;
+}
+.cell {
+  padding: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid white;
+}
+.column:not(:last-child) {
+  border-right: 1px solid white;
+}

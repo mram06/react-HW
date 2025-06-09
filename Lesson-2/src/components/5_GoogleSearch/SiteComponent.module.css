@@ -1,0 +1,28 @@
+.item {
+}
+.item__top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.item__img {
+  width: 28px;
+  height: 28px;
+}
+.item__img img {
+}
+.item__name div:first-child {
+  font-size: 14px;
+}
+.item__name div:last-child {
+  font-size: 12px;
+}
+.item__link {
+  font-size: 20px;
+  color: #96c0ff;
+
+  margin: 3px 0 0 0;
+}
+.item__description {
+  font-size: 14px;
+}
