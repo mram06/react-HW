@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // Задача 1. Вводиться кількість пасажирів. Вивести:
+      // - скільки потрібно автобусів (кожен автобус на 20 місць)
+      // - скільки пляшок води (кожному пасажиру 2 пляшки)
+      // - скільки бутербродів (кожному пасажиру 3 бутерброди)
+      const busSeats = 20;
+      const bottlesOfWaterPerPassenger = 2;
+      const sandwichesPerPassenger = 3;
+
+      function BusManager() {
+        const [buses, setBuses] = React.useState(0);
+        const [bottlesOfWater, setBottlesOfWater] = React.useState(0);
+        const [sandwiches, setSandwiches] = React.useState(0);
+
+        function passengerCountHandler(e) {
+          const passengerCount = e.target.value || 0;
+
+          const busesCount = Math.ceil(passengerCount / busSeats);
+          const bottlesOfWater = passengerCount * bottlesOfWaterPerPassenger;
+          const sandwichesCount = passengerCount * sandwichesPerPassenger;
+
+          setBuses(busesCount);
+          setBottlesOfWater(bottlesOfWater);
+          setSandwiches(sandwichesCount);
+        }
+
+        return (
+          <div>
+            <label>
+              Введіть кількість пасажирів
+              <input type="number" min="0" onChange={passengerCountHandler} />
+            </label>
+            <div>Розрахунок:</div>
+            <div>автобусів - {buses}</div>
+            <div>пляшок води - {bottlesOfWater}</div>
+            <div>бутербродів - {sandwiches}</div>
+          </div>
+        );
+      }
+
+      function App() {
+        return (
+          <>
+            <BusManager />
+          </>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>

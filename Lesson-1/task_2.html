@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // Задача 2. Вводиться номер місяця. Автоматично виводити рекомендований одяг (зима – пальто, літо – шорти ….).
+      // Також автоматично виводити зображення з відповідним зображенням лісу (зима – ліс зі снігом, осінь – жовтий ліс, …).
+
+      function SeasonRecommendations() {
+        const [season, setSeason] = React.useState(null);
+        const [recommendedClothes, setRecommendedClothes] =
+          React.useState(null);
+
+        const [imgSrc, setImgSrc] = React.useState(null);
+
+        const imagesSrcList = [
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Haanja_2010_01_1.jpg/1200px-Haanja_2010_01_1.jpg",
+          "https://pibig.info/uploads/posts/2021-06/1623091455_1-pibig_info-p-pozdnyaya-vesna-priroda-krasivo-foto-1.jpg",
+          "https://krivbass.city/uploads/news/resize/w/750x750/yp1zjqowtrybpztt.jpg",
+          "https://faktypro.com.ua/uploads/img/cikavi-fakti-pro-osin.jpg",
+        ];
+
+        function monthNumberHandler(e) {
+          const monthNumber = parseInt(e.target.value);
+          let season, recommendedClothes;
+
+          switch (monthNumber) {
+            case 12:
+            case 1:
+            case 2:
+              setSeason("зима");
+              setRecommendedClothes("пальто, куртка");
+              setImgSrc(imagesSrcList[0]);
+              break;
+            case 3:
+            case 4:
+            case 5:
+              setSeason("весна");
+              setRecommendedClothes("плащ, вітрівка");
+              setImgSrc(imagesSrcList[1]);
+              break;
+            case 6:
+            case 7:
+            case 8:
+              setSeason("літо");
+              setRecommendedClothes("шорти, футболка");
+              setImgSrc(imagesSrcList[2]);
+              break;
+            case 9:
+            case 10:
+            case 11:
+              setSeason("осінь");
+              setRecommendedClothes("плащ, вітрівка, парасолька");
+              setImgSrc(imagesSrcList[3]);
+              break;
+          }
+        }
+
+        return (
+          <div>
+            <div>
+              <label>
+                Введіть номер місяця:
+                <input
+                  type="number"
+                  min="1"
+                  max="12"
+                  onChange={monthNumberHandler}
+                />
+              </label>
+              <div>Сезон: {season}</div>
+              <div>Рекомендований одяг: {recommendedClothes}</div>
+            </div>
+            <div>
+              <img src={imgSrc} />
+            </div>
+          </div>
+        );
+      }
+
+      function App() {
+        return (
+          <>
+            <SeasonRecommendations />
+          </>
+        );
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
