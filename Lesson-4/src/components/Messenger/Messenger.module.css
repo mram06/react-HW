@@ -1,0 +1,78 @@
+.messenger__body {
+  background-color: rgb(184, 184, 184);
+  width: 300px;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  background-color: rgb(238, 236, 236);
+
+  border-bottom: 1px solid grey;
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+}
+.messages {
+  background: url("../../assets/background.jpg") 0 0/100%;
+  padding: 5px;
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+.messages div {
+  background-color: white;
+  color: black;
+  text-align: left;
+
+  border-radius: 10px 10px 10px 0;
+  padding: 5px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.messages div button {
+  background-color: transparent;
+  height: auto;
+  width: auto;
+  padding: 0;
+  color: black;
+}
+.text_field {
+  border-top: 1px solid grey;
+  max-width: 0 auto;
+  background-color: rgb(238, 236, 236);
+
+  height: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+
+  padding: 0 5px;
+}
+.text_field input {
+  width: 100%;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid grey;
+  color: black;
+  padding: 5px;
+}
+.text_field button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  background-color: rgb(6, 93, 255);
+}
+.text_field button:disabled {
+  background-color: rgba(0, 0, 0, 0.466);
+}
