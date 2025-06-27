@@ -1,0 +1,12 @@
+.active-link {
+  color: #61dafb;
+}
+.active-link:hover {
+  color: #28a5c7;
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+}
