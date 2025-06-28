@@ -33,6 +33,7 @@ body {
 }
 main {
   flex: 1 1 auto;
+  padding: 0 16px;
 }
 h1 {
   font-size: 3.2em;
