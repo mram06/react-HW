@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router";
 import apiRoutes from "../api/apiRoutes";
 import Spinner from "../components/Spinner/Spinner";
 import ProductsPanel from "../components/Products/ProductsPanel";
@@ -40,12 +40,19 @@ function Products() {
 
   const content = (
     <>
+      <Link to={frontRoutes.pages.shop.index}>
+        <FontAwesomeIcon
+          icon="fa-solid fa-right-from-bracket"
+          rotation={180}
+          style={{ color: "#646cff" }}
+        />{" "}
+        Назад
+      </Link>
       <p>Знайдено {totalCount} товарів</p>
       <ProductsPanel productsList={productsList} />
       <Button emitClick={handleClick}>
         <FontAwesomeIcon
-          icon="fa-solid fa-right-from-bracket"
-          rotation={180}
+          icon="fa-solid fa-house"
           style={{ color: "#646cff" }}
         />{" "}
         На головну
