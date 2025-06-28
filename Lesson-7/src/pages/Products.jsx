@@ -31,7 +31,7 @@ function Products() {
       }
     }
     fetchData();
-  }, []);
+  }, [id]);
 
   const navigate = useNavigate();
   function handleClick() {
