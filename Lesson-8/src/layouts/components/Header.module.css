@@ -1,0 +1,13 @@
+.container {
+  background-color: #4caf50;
+  color: white;
+  display: flex;
+  gap: 20px;
+}
+.link {
+  color: white;
+  margin: 20px;
+}
+.active {
+  color: rgb(255, 208, 0);
+}
