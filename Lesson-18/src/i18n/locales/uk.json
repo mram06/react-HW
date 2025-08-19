@@ -1,0 +1,48 @@
+{
+  "home": {
+    "title": "Вітаємо у Firebase Shop!",
+    "label": "Головна"
+  },
+  "products": {
+    "title": "Каталог продуктів",
+    "label": "Продукти"
+  },
+  "cart": {
+    "title": "Мій кошик",
+    "label": "Кошик",
+    "price": "Ціна",
+    "total": "Сума",
+    "totalPrice": "Загальна вартість",
+    "deleteBtn": "Видалити",
+    "isEmpty": "Кошик порожній"
+  },
+  "favorites": {
+    "title": "Моє улюблене",
+    "label": "Улюблене"
+  },
+  "login": {
+    "title": "Вхід",
+    "label": "Увійти",
+    "password": "Пароль",
+    "login": "Увійти",
+    "signUp": "Зареєструватися",
+    "name": "Ім'я",
+    "logout": "Вийти"
+  },
+  "users": {
+    "title": "Користувачі",
+    "label": "Користувачі"
+  },
+  "usersEdit": {
+    "title": "Редагування користувача",
+    "saveBtn": "Зберегти"
+  },
+  "productsEdit": {
+    "titleAdd": "Додавання товару",
+    "titleEdit": "Редагування товару",
+    "addBtn": "Додати продукт",
+    "saveBtn": "Зберегти",
+    "name": "Назва",
+    "imageLink": "Посилання на зображення"
+  }
+}

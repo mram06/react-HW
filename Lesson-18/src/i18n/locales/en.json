@@ -1,0 +1,48 @@
+{
+  "home": {
+    "title": "Welcome on Firebase Shop!",
+    "label": "Home"
+  },
+  "products": {
+    "title": "Products catalogue",
+    "label": "Products"
+  },
+  "cart": {
+    "title": "My cart",
+    "label": "Cart",
+    "price": "Price",
+    "total": "Total",
+    "totalPrice": "Total price",
+    "deleteBtn": "Delete",
+    "isEmpty": "Cart is empty"
+  },
+  "favorites": {
+    "title": "My favorites",
+    "label": "Favorites"
+  },
+  "login": {
+    "title": "Login",
+    "label": "Login",
+    "password": "Password",
+    "login": "Login",
+    "signUp": "Sign up",
+    "name": "Name",
+    "logout": "Logout"
+  },
+  "users": {
+    "title": "Users",
+    "label": "Users"
+  },
+  "usersEdit": {
+    "title": "User edit",
+    "saveBtn": "Save"
+  },
+  "productsEdit": {
+    "titleAdd": "Add new product",
+    "titleEdit": "Edit product",
+    "addBtn": "Add product",
+    "saveBtn": "Save",
+    "name": "Title",
+    "imageLink": "Link to image"
+  }
+}
